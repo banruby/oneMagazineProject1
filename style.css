@@ -8,7 +8,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 /* --- GENERAL --- */
 
-h1, h2, h3, p, ul, li, a {
+h1, h2, h3, h4, p, ul, li, a {
     margin: 0;
     padding: 0;
 }
@@ -40,9 +40,11 @@ button {
     border: none;
 }
 
-/* --- FONTS & SIZING --- */
 
-h1, h2, h3, button {
+/* --- FONT FAMILIES --- */
+
+
+h1, h2, h3, h4, button {
     font-family: 'Cormorant Garamond', serif;
 }
 
@@ -53,6 +55,10 @@ nav {
 p {
     font-family: 'Roboto', sans-serif;
 }
+
+
+/* --- FONT SIZING --- */
+
 
 html {
     font-size: 125%;
@@ -114,11 +120,25 @@ button {
     font-size: 1.25rem;
 }
 
+h4 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.iconBar i {
+    font-size: 2.5rem;
+}
+
+.iconBar h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
 
 
 /* --- COLOURS --- */
 
-h1, header h2, nav, .socialIcons, button {
+h1, header h2, nav, .socialIcons, button, .iconBar {
     color: white;
 }
 
@@ -224,4 +244,63 @@ nav li:nth-child(4) {
 .highlight h3 {
     margin-bottom: 0.5rem;
     height: 100%;
+}
+
+/* --- TREND & FASHION WEEK SECTIONS --- */
+
+section.trends {
+    margin-top: 5rem;
+}
+
+div.trends, div.fashionWeek {
+    width: 32%;
+    float: left;
+}
+
+div.trends {
+    margin: 8% 8% 0 10%;
+}
+
+div.fashionWeek {
+    margin: 10% 10% 0 8%;
+}
+
+section.trends img, section.fashionWeek img {
+    width: 50%;
+    float: left;
+}
+
+.trends h4 {
+    width: 300px;
+}
+
+.fashionWeek h4 {
+    width: 550px;
+}
+
+.trends h4, .fashionWeek h4 {
+    margin-bottom: 1rem;
+}
+
+.trends p, .fashionWeek p {
+    margin-bottom: 1rem;
+}
+
+/* --- ICONBAR --- */
+
+ul.iconBar {
+    background: url(assets/iconBarBackground.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.iconBar li {
+    display: inline-block;
+    padding: 2rem;
+    margin: 3rem;
+}
+
+.iconBar i {
+    margin: 1rem;
 }
