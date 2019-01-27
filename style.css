@@ -19,7 +19,7 @@ ul {
 
 .wrapper {
     max-width: 1280px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -135,6 +135,7 @@ h4 {
 
 .copyright {
     font-size: 0.9rem;
+    font-weight: 400;
 }
 
 h5 {
@@ -153,7 +154,13 @@ input[type="submit"] {
     line-height: 29px;
 }
 
+.menuToggle {
+    font-size: 2rem;
+}
+
+
 /* --- COLOURS --- */
+
 
 h1, header h2, nav, .socialIcons, button, .iconBar {
     color: #ffffff;
@@ -185,6 +192,7 @@ h5 {
 
 
 /* --- HEADER --- */
+
 
 header {
     background-image: url(assets/headerBackground.jpg);
@@ -248,8 +256,13 @@ nav li:nth-child(4) {
     padding: 0.3rem;
 }
 
+.menuToggle {
+    display: none;
+}
+
 
 /* --- NEWS SECTION --- */
+
 
 .news h2 {
     text-align: center;
@@ -271,25 +284,19 @@ nav li:nth-child(4) {
     margin-top: 5rem;
 }
 
-.highlight h3, .highlight p {
+.highlightTextContainer {
     margin-left: 37.5px;
     width: calc(72% - 37.5px);
     float: left;
-}
-
-.highlight h3 {
     margin-top: 5rem;
 }
 
 .highlight button {
-    margin-left: 37.5px;
-    float: left;
     margin-top: 2.8rem;
 }
 
 .highlight h3 {
     margin-bottom: 0.5rem;
-    height: 100%;
 }
 
 /* --- TREND & FASHION WEEK SECTIONS --- */
@@ -299,21 +306,29 @@ section.trends {
 }
 
 div.trends, div.fashionWeek {
-    width: 32%;
+    width: 50%;
     float: left;
 }
 
 div.trends {
-    margin: 8% 8% 0 10%;
+    float: right;
+}
+
+div.trends {
+    padding: 8% 8% 0 10%;
 }
 
 div.fashionWeek {
-    margin: 10% 10% 0 8%;
+    padding: 10% 10% 0 8%;
 }
 
-section.trends img, section.fashionWeek img {
+.trends img, .fashionWeek img {
     width: 50%;
     float: left;
+}
+
+.trends img {
+    float: right;
 }
 
 .trends h4 {
@@ -341,15 +356,16 @@ section.iconBar {
 }
 
 ul.iconBar {
-    max-width: 75%;
+    max-width: 95%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .iconBar li {
-    display: inline-block;
     text-align: center;
-    padding: 2rem;
-    margin: 3rem;
+    width: calc((100% / 3) - 4rem);
+    margin: 5rem 2rem;
+    float: right;
 }
 
 .iconBar i {
@@ -366,6 +382,10 @@ ul.iconBar {
     padding-bottom: 5rem;
 }
 
+.footerLeft {
+    margin-top: 3rem;
+}
+
 .footerRight {
     padding-left: 5rem;
 }
@@ -375,15 +395,16 @@ ul.iconBar {
 }
 
 .contact {
-    width: 60%;
+    width: 75%;
+    margin-top: 3rem;
 }
 
 h5 {
-    padding: 3rem 0 0.5rem 0;
+    padding: 0 0 0.5rem 0;
 }
 
 .footerRight ul {
-    width: 40%;
+    width: 25%;
     padding-top: 3rem;
     text-align: right;
 }
@@ -397,7 +418,7 @@ h5 {
 }
 
 .footerRight p {
-    margin: 0.1rem;
+    margin: 0.2rem;
 }
 
 .copyright {
@@ -416,10 +437,295 @@ input{
 input[type="email"] {
     width: 74%;
     padding: 0 1.5rem;
+    border: none;
 }
 
 input[type="submit"] {
     background-color: black;
     color: white;
     width: 25%;
+    border: none;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+
+@media (max-width: 1400px) {
+    
+    div.highlightImageContainer {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%; 
+    }
+
+    div.highlightTextContainer {
+        width: 60%;
+        margin: 4rem 20% 0 20%;
+    }
+
+    .highlight h3 {
+        margin-bottom: 1rem;
+    }
+
+    .highlight button {
+        width: 30%;
+        margin: 2.8rem 35% 0 35%;
+    }
+
+    div.trends, div.fashionWeek {
+        width: 50%;
+        padding: 5%;
+        margin: 0;
+    }
+
+    .trends h4. .fashionWeek h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    .fashionWeek h4 {
+        width: 100%;
+    }
+
+     .trends h4, .fashionWeek h4 {
+        font-size: 1.5rem;
+    }
+
+    input[type="email"], input[type="submit"] {
+        margin-top: 1rem;
+    }
+
+    input[type="email"] {
+        width: 65%;
+    }
+
+    input[type="submit"] {
+        width: 34%;
+    }
+
+    .contact p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1210px) {
+
+    div.highlightImageContainer {
+        width: 75%;
+        margin-left: 12.5%;
+        margin-right: 12.5%; 
+    }
+
+    div.highlightTextContainer {
+        width: 75%;
+        margin: 4rem 12.5% 0 12.5%;
+    }
+
+    section.trends, section.fashionWeek {
+        width: 50%;
+        padding: 0 2.5%;
+        float: left;
+        margin: 5rem 0 2rem 0;
+    }
+
+    .trends h4 {
+        width: 80%;
+        margin: 0 10% 1rem 10%;
+    }
+
+    .trends h4, .fashionWeek h4 {
+        text-align: center;
+        min-height: 125px;
+    }
+
+    .trends p, .fashionWeek p {
+        margin-bottom: 2rem;
+    }
+
+    .trends button, .fashionWeek button {
+        width: 50%;
+        margin: 0 25% 0 25%;
+    }
+
+    section.iconBar {
+        clear:both;
+    }
+
+    div.trends, .trends img, div.fashionWeek, .fashionWeek img {
+        float: none;
+        width: 100%;
+    }
+
+    .footerLeft, .footerRight {
+        float: none;
+        width: 100%;
+        padding: 2rem 5%;
+        margin: 0;
+    }
+
+    .footerLeft h5, .footerLeft p {
+        text-align: center;
+    }
+
+    .contact {
+        margin-top: 0;
+    }
+
+    .footerRight ul {
+        padding-top: 0;
+    }
+}
+
+ @media (max-width: 900px) {
+
+    header h2, nav li, .socialIcons, .newsImageContainer:nth-of-type(3)  {
+        display: none;
+    }
+
+    h1 span {
+        font-size: 8rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+        padding-top: calc(50vh - 90px)
+    }
+
+    .newsImageContainer, .newsImageContainer:nth-of-type(2) {
+        width: calc(50% - 20px);
+        margin: 0 10px;
+    }
+
+    .menuToggle {
+        display: block;
+        text-align: right;
+        position: relative;
+        left: 15px;
+    }
+
+    header nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .highlight button {
+        width: 50%;
+        min-height: 3rem;
+        text-align: center;
+        margin: 2.8rem 25% 0 25%;
+    }
+
+    section.trends, section.fashionWeek {
+        width: 100%;
+        padding: 0;
+        float: none;
+        margin: 5rem 0 2rem 0;
+    }
+
+    section.fashionWeek {
+        margin-top: 2rem;
+    }
+
+    div.trends, div.fashionWeek {
+        width: 70%;
+        margin: 0 15%;
+    }
+    
+    .trends h4, .fashionWeek h4 {
+        width: 100%;
+        margin: 0;
+        min-height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .trends p, .fashionWeek p {
+        text-align: center;
+    }
+
+    section.iconBar {
+        padding: 1rem;
+    }
+    
+    .iconBar li {
+        display: block;
+        float: none;
+        width: auto;
+        margin: 2rem;
+    }
+
+ }
+
+@media (max-width: 550px) {
+
+    .wrapper {
+        width: 100%;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    header {
+        min-height: auto;
+    }
+
+    h1 span {
+        font-size: 5rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        padding-top: calc(50vh - 36px)
+    }
+
+    nav ul {
+        padding-right: 15px;
+    }
+
+    .news h2 {
+        font-size: 1.75rem;
+    }
+
+    div.highlightImageContainer {
+        width: 85%;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
+
+    .highlight h3 {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 2rem;
+    }
+
+    div.highlightTextContainer {
+        width: 90%;
+        margin: 4rem 5% 0 5%;
+    }
+
+    div.trends, div.fashionWeek {
+        width: 90%;
+        margin: 3rem 5% 1rem 5%;
+        padding: 0;
+    }
+
+    .trends button, .fashionWeek button {
+        width: 40%;
+        margin: 0 30% 0 30%;
+    }
+
+    .trends h4, .fashionWeek h4 {
+        font-size: 1.1rem;
+    }
+
+    input[type="email"], input[type="submit"] {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact p, .copyright {
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+
 }

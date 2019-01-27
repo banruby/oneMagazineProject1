@@ -8,7 +8,7 @@
     <title>One Magazine</title>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,600|Cormorant+Garamond:400,500,600,600i|Roboto:300"
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,600|Cormorant+Garamond:400,500,600,600i|Roboto:300, 400"
         rel="stylesheet">
 
     <!-- FONT AWESOME -->
@@ -22,6 +22,7 @@
 
 
 <body>
+    <!-- HEADER -->
     <header>
         <div class="wrapper clearfix">
             <h2>One</h2>
@@ -38,6 +39,9 @@
                     </li>
                     <li>
                         <a href="#">Contact</a>
+                    </li>
+                    <li class="menuToggle">
+                        <i class="fas fa-bars"></i>
                     </li>
                 </ul>
             </nav>
@@ -64,71 +68,75 @@
                     </a>
                 </li>
             </ul>
-        </div> <!--- /> header wrapper -->
+        </div> <!--- /> HEADER WRAPPER ENDS -->
     </header>
-    <section class="news">
-        <div class="wrapper clearfix">
-            <h2>News Articles</h2>
-            <div class="newsImageContainer">
-                <img src="assets/newsImage1.jpg" alt="">
-            </div>
-            <div class="newsImageContainer">
-                <img src="assets/newsImage2.jpg" alt="">
-            </div>
-            <div class="newsImageContainer">
-                <img src="assets/newsImage3.jpg" alt="">
-            </div>
-            <div class="highlight clearfix">
-                <div class="highlightImageContainer">
-                    <img src="assets/highlight.jpg" alt="">
+    <!-- MAIN -->
+    <main>
+        <!-- NEWS -->
+        <section class="news">
+            <div class="wrapper clearfix">
+                <h2>News Articles</h2>
+                <div class="newsImageContainer">
+                    <img src="assets/newsImage1.jpg" alt="">
                 </div>
-                <h3>This week's highlight</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum
-                    eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis
-                    convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat
-                    vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar
-                    tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla el.
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Nulla pulvinar tortor nulla elementu eleifend.</p>
+                <div class="newsImageContainer">
+                    <img src="assets/newsImage2.jpg" alt="">
+                </div>
+                <div class="newsImageContainer">
+                    <img src="assets/newsImage3.jpg" alt="">
+                </div>
+                <div class="highlight clearfix">
+                    <div class="highlightImageContainer">
+                        <img src="assets/highlight.jpg" alt="">
+                    </div>
+                    <div class="highlightTextContainer">
+                        <h3>This week's highlight</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum
+                        eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla el. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementu eleifend.</p>
+                        <button>Read more</button>
+                    </div>
+                </div> <!--- /> highlight -->
+            </div> <!--- /> news wrapper -->
+        </section>
+        <!-- TRENDS -->
+        <section class="trends clearfix">
+            <img src="assets/trends.jpg" alt="">
+            <div class="trends">
+                <h4>New trends to lookout for</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend.
+                    Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus.
+                    Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
                 <button>Read more</button>
             </div>
-        </div> <!--- /> news wrapper -->
-    </section>
-    <section class="trends">
-        <div class="trends">
-            <h4>New trends to lookout for</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend.
-                Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus.
-                Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
-            <button>Read more</button>
-        </div>
-        <img src="assets/trends.jpg" alt="">
-    </section>
-    <section class="fashionWeek clearfix">
-        <img src="assets/fashionWeek.jpg" alt="">
-        <div class="fashionWeek">  
-            <h4>Behind the scenes from Spring/Summer fashion week</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus. Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
-            <button>Read more</button>
-        </div>
-    </section>
-    <section class="iconBar">
-        <ul class="iconBar">
-            <li>
-                <i class="fas fa-shopping-bag"></i>
-                <h3>Shop brands</h3>
-            </li>
-            <li>
-                <i class="fas fa-users"></i>
-                <h3>Community</h3>
-            </li>
-            <li>
-                <i class="fas fa-calendar-check"></i>
-                <h3>Events</h3>
-            </li>
-        </ul>
-    </section>
+        </section>
+        <!-- FASHION WEEK -->
+        <section class="fashionWeek clearfix">
+            <img src="assets/fashionWeek.jpg" alt="">
+            <div class="fashionWeek">  
+                <h4>Behind the scenes from Spring/Summer fashion week</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus. Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
+                <button>Read more</button>
+            </div>
+        </section>
+        <!-- ICON BAR -->
+        <section class="iconBar">
+                <ul class="iconBar clearfix">
+                    <li>
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Events</h3>
+                    </li>
+                    <li>
+                        <i class="fas fa-users"></i>
+                        <h3>Community</h3>
+                    </li>
+                    <li>
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>Shop brands</h3>
+                    </li>
+                </ul>
+        </section>
+    </main>
+    <!-- FOOTER -->
     <footer class="clearfix">
         <div class="wrapper">
             <div class="footerLeft">
