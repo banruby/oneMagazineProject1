@@ -6,6 +6,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+.visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
 /* --- GENERAL --- */
 
 h1, h2, h3, h4, h5, p, ul, li, a {
@@ -43,7 +45,7 @@ button {
 /* --- FONT FAMILIES --- */
 
 
-h1, h2, h3, h4, h5, button, input[type="submit"] {
+h1, h2, h3, h4, h5, button, .iconBar p, input[type="submit"] {
     font-family: 'Cormorant Garamond', serif;
 }
 
@@ -65,7 +67,6 @@ html {
 
 h1 {
     font-size: 7.5rem;
-    text-transform: uppercase;
     font-style: italic;
     font-weight: 600;
     letter-spacing: 0;
@@ -77,14 +78,12 @@ h1 span {
 }
 
 nav {
-    text-transform: uppercase;
     font-size: 0.9rem;
     font-weight: 600;
 }
 
 h2 {
     font-size: 2.5rem;
-    text-transform: uppercase;
 }
 
 header h2 {
@@ -98,7 +97,6 @@ header h2 {
 .highlight h3 {
     font-size: 2rem;
     font-weight: 600;
-    text-transform: uppercase;
     line-height: 1.6rem;
 }
 
@@ -110,7 +108,6 @@ p {
 
 button {
     font-size: 0.9rem;
-    text-transform: uppercase;
     font-weight: 600;
 }
 
@@ -121,16 +118,15 @@ button {
 h4 {
     font-size: 1.75rem;
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 .iconBar i {
     font-size: 2.5rem;
 }
 
-.iconBar h3 {
+.iconBar p {
     font-size: 1.5rem;
-    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .copyright {
@@ -140,22 +136,24 @@ h4 {
 
 h5 {
     font-size: 1.25rem;
-    text-transform: uppercase;
     font-weight: 600;
 }
 
 input[type="submit"] {
-    text-transform: uppercase;
     font-size: 0.9rem;
 }
 
 .footerRight ul {
-    text-transform: uppercase;
     line-height: 29px;
 }
 
 .menuToggle {
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+
+h1, nav, h2, h3, button, h4, .iconBar p,
+h5, input[type="submit"], .footerRight ul {
+    text-transform: uppercase;
 }
 
 
@@ -431,11 +429,12 @@ input{
     height: 2.5rem;
     padding: 0;
     border: none;
-    display: inline;
+    display: block;
+    float: left;
 }
 
 input[type="email"] {
-    width: 74%;
+    width: 75%;
     padding: 0 1.5rem;
     border: none;
 }
@@ -500,7 +499,7 @@ input[type="submit"] {
     }
 
     input[type="submit"] {
-        width: 34%;
+        width: 35%;
     }
 
     .contact p {
@@ -599,13 +598,17 @@ input[type="submit"] {
     .menuToggle {
         display: block;
         text-align: right;
-        position: relative;
-        left: 15px;
+        position: absolute;
+        line-height: 0;
+        padding: 0;
+        top: 0.5rem;
+        right: 1rem;
     }
 
     header nav {
         width: 100%;
         text-align: center;
+        padding: 0;
     }
 
     .highlight button {
@@ -613,6 +616,11 @@ input[type="submit"] {
         min-height: 3rem;
         text-align: center;
         margin: 2.8rem 25% 0 25%;
+    }
+
+    .highlight h3 {
+        text-align: center;
+        padding: 0 2rem;
     }
 
     section.trends, section.fashionWeek {
@@ -694,8 +702,6 @@ input[type="submit"] {
 
     .highlight h3 {
         font-size: 2rem;
-        text-align: center;
-        padding: 0 2rem;
     }
 
     div.highlightTextContainer {
@@ -721,6 +727,7 @@ input[type="submit"] {
     input[type="email"], input[type="submit"] {
         width: 100%;
         text-align: center;
+        float: none;
     }
 
     .contact p, .copyright {

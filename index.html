@@ -41,7 +41,7 @@
                         <a href="#">Contact</a>
                     </li>
                     <li class="menuToggle">
-                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-bars"><a href="#"></a></i>
                     </li>
                 </ul>
             </nav>
@@ -123,15 +123,15 @@
                 <ul class="iconBar clearfix">
                     <li>
                         <i class="fas fa-calendar-check"></i>
-                        <h3>Events</h3>
+                        <p>Events</p>
                     </li>
                     <li>
                         <i class="fas fa-users"></i>
-                        <h3>Community</h3>
+                        <p>Community</p>
                     </li>
                     <li>
                         <i class="fas fa-shopping-bag"></i>
-                        <h3>Shop brands</h3>
+                        <p>Shop brands</p>
                     </li>
                 </ul>
         </section>
@@ -142,9 +142,11 @@
             <div class="footerLeft">
                 <h5>Stay updated</h5>
                 <p>Subscribe to our newsletter to stay updated.</p>
-                <form action="">
-                    <input type="email" name="email" placeholder="email address">
-                    <input type="submit" name="submit" value="subscribe">
+                <form action="" class="clearfix">
+                    <label for="email" class="visuallyhidden">Email address</label>
+                    <input type="email" name="email" placeholder="email address" id="email">
+                    <label for="submit" class="visuallyhidden">Submit</label>
+                    <input type="submit" name="submit" value="subscribe" id="submit">
                 </form>
             </div>
             <div class="footerRight clearfix">
