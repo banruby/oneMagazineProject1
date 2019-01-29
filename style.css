@@ -88,6 +88,7 @@ h2 {
 
 header h2 {
     font-size: 3rem;
+    font-style: italic;
 }
 
 .news h2 {
@@ -165,7 +166,7 @@ h1, header h2, nav, .socialIcons, button, .iconBar {
 }
 
 button {
-    background-color: rgba(24,51,153,0.78);
+    background-color: rgba(24,51,153,1);
 }
 
 footer {
@@ -193,10 +194,11 @@ h5 {
 
 
 header {
-    background-image: url(assets/headerBackground.jpg);
+    background-image: url(assets/headerBackgroundTwoX.jpg);
     min-height: 800px;
     height: 100vh;
     background-position: center top;
+    background-size: cover;
 }
 
 header .wrapper {
@@ -348,7 +350,7 @@ div.fashionWeek {
 /* --- ICONBAR --- */
 
 section.iconBar {
-    background: url(assets/iconBarBackground.jpg);
+    background: url(assets/iconBarBackgroundThreeX.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -581,6 +583,11 @@ input[type="submit"] {
         display: none;
     }
 
+    header {
+        background-image: url(assets/headerBackground.jpg);
+        background-size: cover;
+    }
+
     h1 span {
         font-size: 8rem;
     }
@@ -652,6 +659,8 @@ input[type="submit"] {
 
     section.iconBar {
         padding: 1rem;
+        background: url(assets/iconBarBackground.jpg);
+        background-position: 80% 50%;
     }
     
     .iconBar li {
