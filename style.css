@@ -36,9 +36,23 @@ img {
 }
 
 button {
-    height: 2.5rem;
-    width: 8rem;
+    height: 50px;
+    width: 175px;
     border: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+  padding: 2px;
+}
+
+.skip-link:focus {
+  left: 0;
 }
 
 
@@ -67,8 +81,6 @@ html {
 
 h1 {
     font-size: 7.5rem;
-    font-style: italic;
-    font-weight: 600;
     letter-spacing: 0;
     line-height: 90%;
 }
@@ -77,57 +89,35 @@ h1 span {
     font-size: 11.5rem;
 }
 
-nav {
+nav, button {
     font-size: 0.9rem;
-    font-weight: 600;
 }
 
-h2 {
+h2, .menuToggle, .iconBar i {
     font-size: 2.5rem;
 }
 
 header h2 {
     font-size: 3rem;
-    font-style: italic;
-}
-
-.news h2 {
-    font-size: 2.5rem;
 }
 
 .highlight h3 {
     font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.6rem;
+    line-height: 32px;
 }
 
 p {
     font-size: 1rem;
     font-weight: 300;
-    line-height: 1.5rem;
-}
-
-button {
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.socialIcons {
-    font-size: 1.25rem;
+    line-height: 30px;
 }
 
 h4 {
     font-size: 1.75rem;
-    font-weight: 600;
-}
-
-.iconBar i {
-    font-size: 2.5rem;
 }
 
 .iconBar p {
     font-size: 1.5rem;
-    font-weight: 600;
 }
 
 .copyright {
@@ -135,9 +125,8 @@ h4 {
     font-weight: 400;
 }
 
-h5 {
+.socialIcons, h5 {
     font-size: 1.25rem;
-    font-weight: 600;
 }
 
 input[type="submit"] {
@@ -148,15 +137,18 @@ input[type="submit"] {
     line-height: 29px;
 }
 
-.menuToggle {
-    font-size: 2.5rem;
-}
-
 h1, nav, h2, h3, button, h4, .iconBar p,
 h5, input[type="submit"], .footerRight ul {
     text-transform: uppercase;
 }
 
+h1, header h2 {
+    font-style: italic;
+}
+
+h1, nav, .highlight h3, button, h4, .iconBar p, h5 {
+    font-weight: 600;
+}
 
 /* --- COLOURS --- */
 
@@ -166,7 +158,7 @@ h1, header h2, nav, .socialIcons, button, .iconBar {
 }
 
 button {
-    background-color: rgba(24,51,153,1);
+    background-color: rgba(24,51,153,0.78);
 }
 
 footer {
@@ -179,6 +171,14 @@ footer {
 
 input[type="email"], .footerRight p {
     color: #1f2022;
+}
+
+input[type="email"] {
+    border: 2px solid white;
+}
+
+input[type="email"]:focus {
+    border: 2px solid rgb(24,51,153);
 }
 
 h5 {
@@ -226,7 +226,7 @@ nav {
 }
 
 header h2, nav {
-    padding-top: 1rem;
+    padding-top: 20px;
 }
 
 nav ul {
@@ -253,7 +253,7 @@ nav li:nth-child(4) {
 }
 
 .socialIcons li {
-    padding: 0.3rem;
+    padding: 6px;
 }
 
 .menuToggle {
@@ -266,7 +266,7 @@ nav li:nth-child(4) {
 
 .news h2 {
     text-align: center;
-    margin: 5rem 0;
+    margin: 100px 0;
 }
 
 .newsImageContainer {
@@ -281,28 +281,28 @@ nav li:nth-child(4) {
 .highlightImageContainer {
     float: left;
     width: 28%;
-    margin-top: 5rem;
+    margin-top: 100px;
 }
 
 .highlightTextContainer {
     margin-left: 37.5px;
     width: calc(72% - 37.5px);
     float: left;
-    margin-top: 5rem;
+    margin-top: 100px;
 }
 
 .highlight button {
-    margin-top: 2.8rem;
+    margin-top: 55px;
 }
 
 .highlight h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
 }
 
 /* --- TREND & FASHION WEEK SECTIONS --- */
 
 section.trends {
-    margin-top: 5rem;
+    margin-top: 100px;
 }
 
 div.trends, div.fashionWeek {
@@ -339,15 +339,13 @@ div.fashionWeek {
     width: 550px;
 }
 
-.trends h4, .fashionWeek h4 {
-    margin-bottom: 1rem;
+.trends h4, .fashionWeek h4, .trends p, .fashionWeek p {
+    margin-bottom: 20px;
 }
 
-.trends p, .fashionWeek p {
-    margin-bottom: 1rem;
-}
 
 /* --- ICONBAR --- */
+
 
 section.iconBar {
     background: url(assets/iconBarBackgroundThreeX.jpg);
@@ -364,12 +362,12 @@ ul.iconBar {
 .iconBar li {
     text-align: center;
     width: calc((100% / 3) - 4rem);
-    margin: 5rem 2rem;
+    margin: 100px 40px;
     float: right;
 }
 
 .iconBar i {
-    margin: 1rem;
+    margin: 20px;
 }
 
 
@@ -379,15 +377,15 @@ ul.iconBar {
 .footerLeft, .footerRight {
     width: 50%;
     float: left;
-    padding-bottom: 5rem;
+    padding-bottom: 100px;
 }
 
 .footerLeft {
-    margin-top: 3rem;
+    margin-top: 60px;
 }
 
 .footerRight {
-    padding-left: 5rem;
+    padding-left: 100px;
 }
 
 .contact, .footerRight ul {
@@ -396,16 +394,16 @@ ul.iconBar {
 
 .contact {
     width: 75%;
-    margin-top: 3rem;
+    margin-top: 60px;
 }
 
 h5 {
-    padding: 0 0 0.5rem 0;
+    padding: 0 0 10px 0;
 }
 
 .footerRight ul {
     width: 25%;
-    padding-top: 3rem;
+    padding-top: 60px;
     text-align: right;
 }
 
@@ -414,31 +412,29 @@ h5 {
 }
 
 .footerLeft p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
 }
 
 .footerRight p {
-    margin: 0.2rem;
+    margin: 5px;
 }
 
 .copyright {
     clear: both;
     text-align: center;
-    padding: 0.5rem;
+    padding: 10px;
 }
 
 input{
-    height: 2.5rem;
+    height: 50px;
     padding: 0;
-    border: none;
     display: block;
     float: left;
 }
 
 input[type="email"] {
     width: 75%;
-    padding: 0 1.5rem;
-    border: none;
+    padding: 0 30px;
 }
 
 input[type="submit"] {
@@ -462,7 +458,7 @@ input[type="submit"] {
 
     div.highlightTextContainer {
         width: 60%;
-        margin: 4rem 20% 0 20%;
+        margin: 80px 20% 0 20%;
     }
 
     .highlight h3 {
@@ -471,7 +467,7 @@ input[type="submit"] {
 
     .highlight button {
         width: 30%;
-        margin: 2.8rem 35% 0 35%;
+        margin: 56px 35% 0 35%;
     }
 
     div.trends, div.fashionWeek {
@@ -481,7 +477,7 @@ input[type="submit"] {
     }
 
     .trends h4. .fashionWeek h4 {
-        margin-bottom: 0.5rem;
+        margin-bottom: 10px;
     }
 
     .fashionWeek h4 {
@@ -493,7 +489,7 @@ input[type="submit"] {
     }
 
     input[type="email"], input[type="submit"] {
-        margin-top: 1rem;
+        margin-top: 20px;
     }
 
     input[type="email"] {
@@ -519,19 +515,19 @@ input[type="submit"] {
 
     div.highlightTextContainer {
         width: 75%;
-        margin: 4rem 12.5% 0 12.5%;
+        margin: 80px 12.5% 0 12.5%;
     }
 
     section.trends, section.fashionWeek {
         width: 50%;
         padding: 0 2.5%;
         float: left;
-        margin: 5rem 0 2rem 0;
+        margin: 100px 0 40px 0;
     }
 
     .trends h4 {
         width: 80%;
-        margin: 0 10% 1rem 10%;
+        margin: 0 10% 20px 10%;
     }
 
     .trends h4, .fashionWeek h4 {
@@ -540,7 +536,7 @@ input[type="submit"] {
     }
 
     .trends p, .fashionWeek p {
-        margin-bottom: 2rem;
+        margin-bottom: 40px;
     }
 
     .trends button, .fashionWeek button {
@@ -560,7 +556,7 @@ input[type="submit"] {
     .footerLeft, .footerRight {
         float: none;
         width: 100%;
-        padding: 2rem 5%;
+        padding: 40px 5%;
         margin: 0;
     }
 
@@ -589,7 +585,7 @@ input[type="submit"] {
     }
 
     h1 span {
-        font-size: 8rem;
+        font-size: 80px;
     }
 
     h1 {
@@ -608,8 +604,8 @@ input[type="submit"] {
         position: absolute;
         line-height: 0;
         padding: 0;
-        top: 0.5rem;
-        right: 1rem;
+        top: 10px;
+        right: 20px;
     }
 
     header nav {
@@ -620,25 +616,25 @@ input[type="submit"] {
 
     .highlight button {
         width: 50%;
-        min-height: 3rem;
+        min-height: 60px;
         text-align: center;
-        margin: 2.8rem 25% 0 25%;
+        margin: 56px 25% 0 25%;
     }
 
     .highlight h3 {
         text-align: center;
-        padding: 0 2rem;
+        padding: 0 40px;
     }
 
     section.trends, section.fashionWeek {
         width: 100%;
         padding: 0;
         float: none;
-        margin: 5rem 0 2rem 0;
+        margin: 100px 0 40px 0;
     }
 
     section.fashionWeek {
-        margin-top: 2rem;
+        margin-top: 40px;
     }
 
     div.trends, div.fashionWeek {
@@ -650,7 +646,7 @@ input[type="submit"] {
         width: 100%;
         margin: 0;
         min-height: auto;
-        margin-bottom: 1rem;
+        margin-bottom: 20px;
     }
 
     .trends p, .fashionWeek p {
@@ -658,7 +654,7 @@ input[type="submit"] {
     }
 
     section.iconBar {
-        padding: 1rem;
+        padding: 20px;
         background: url(assets/iconBarBackground.jpg);
         background-position: 80% 50%;
     }
@@ -667,9 +663,8 @@ input[type="submit"] {
         display: block;
         float: none;
         width: auto;
-        margin: 2rem;
+        margin: 40px;
     }
-
  }
 
 @media (max-width: 550px) {
@@ -715,12 +710,12 @@ input[type="submit"] {
 
     div.highlightTextContainer {
         width: 90%;
-        margin: 4rem 5% 0 5%;
+        margin: 80px 5% 0 5%;
     }
 
     div.trends, div.fashionWeek {
         width: 90%;
-        margin: 3rem 5% 1rem 5%;
+        margin: 60px 5% 20px 5%;
         padding: 0;
     }
 
